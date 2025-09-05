@@ -32,3 +32,36 @@
 <img width="481" height="87" alt="image" src="https://github.com/user-attachments/assets/a09f6283-26a1-4203-aa6d-6efa26a7f626" />
 
 #### Login as root 
+
+
+<img width="1474" height="707" alt="image" src="https://github.com/user-attachments/assets/4d90bf1d-1c66-47dd-b0da-4f85a8b3119c" />
+
+## Now here I describe when I have r & w permission of /etc/shadow file but assume in the previous escalation method by read file is not work (root password can't be cracked) or the file /etc/shadow have only w permission .. For this situation I can get permission of root for only having the write permission of /etc/shadow file 
+
+<img width="711" height="44" alt="image" src="https://github.com/user-attachments/assets/ec32a829-3352-4273-9211-4ac8a83506e5" />
+
+#### Here i have create a netcat listening port ..If anyone connect to the machine the he get the /etc/shadow file  
+
+<img width="1438" height="552" alt="image" src="https://github.com/user-attachments/assets/6cfe6d8a-4196-4656-9446-fb659bcb685b" />
+
+#### Here i get the file on my local machine .. Now I have to update the root password .. 
+
+<img width="1438" height="222" alt="image" src="https://github.com/user-attachments/assets/05560066-1b34-4300-b5ae-5a1f91bc66b5" />
+
+#### Now I created a sha256 hash of durjoy..
+
+
+<img width="1438" height="245" alt="image" src="https://github.com/user-attachments/assets/c92ecdb6-1d0e-4c0e-b536-fc39d9ca69e8" />
+
+#### Now change the root hash to my crated hash ..And save the file .. 
+
+<img width="1435" height="62" alt="image" src="https://github.com/user-attachments/assets/5326e9c0-b1d3-4bfd-ac29-d235939ed629" /> 
+
+#### Transfer the updated shadow file to the remote machine and interchange /etc/shadow to shadow 
+
+<img width="707" height="67" alt="image" src="https://github.com/user-attachments/assets/8ef9b622-a282-4db7-8690-d5f287ef150e" />
+
+#### netcat listener to the remote machine..Here now /etc/shadow file is updated ..Now I can login as root using the password of durjoy which i created 
+
+<img width="707" height="67" alt="image" src="https://github.com/user-attachments/assets/2d9b4ae2-7e05-4929-bc6c-589e7267ac21" />
+
