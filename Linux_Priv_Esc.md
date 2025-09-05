@@ -5,6 +5,7 @@
 <img width="859" height="371" alt="image" src="https://github.com/user-attachments/assets/a56201ad-4e8a-4ab0-a9e4-cb4581e0a06b" />
 
 <img width="1434" height="140" alt="image" src="https://github.com/user-attachments/assets/8c310ba0-48bf-49c6-bf37-85530f9556e6" />
+
 ## Now find id of the use --> Task_1.2
 
 <img width="1097" height="42" alt="image" src="https://github.com/user-attachments/assets/9dc6cdb5-88c2-4e6b-a198-06e97c415dee" />
@@ -21,9 +22,11 @@
 
 
 <img width="1308" height="500" alt="image" src="https://github.com/user-attachments/assets/40b10db9-7987-4e32-bb88-6cebc3838d0c" />
+
 #### Read the /etc/shadow ...Here i get the root user password hashes .. Copy the hash and crack the hash using john the ripper 
 
 <img width="1308" height="389" alt="image" src="https://github.com/user-attachments/assets/defd9386-5b34-4cf4-aca4-9ca03400e04a" />
+
 #### Here I get the root password that is <b> password123 <b> and the hash was encrypted by <b> sha512crypt <b>
 
 <img width="481" height="87" alt="image" src="https://github.com/user-attachments/assets/a09f6283-26a1-4203-aa6d-6efa26a7f626" />
