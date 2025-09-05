@@ -63,5 +63,10 @@
 
 #### netcat listener to the remote machine..Here now /etc/shadow file is updated ..Now I can login as root using the password of durjoy which i created 
 
-<img width="707" height="67" alt="image" src="https://github.com/user-attachments/assets/2d9b4ae2-7e05-4929-bc6c-589e7267ac21" />
+<img width="707" height="67" alt="image" src="https://github.com/user-attachments/assets/2d9b4ae2-7e05-4929-bc6c-589e7267ac21" /> 
+
+#### Task-4 Completed 
+
+<img width="1310" height="836" alt="image" src="https://github.com/user-attachments/assets/57faff68-60e0-49de-abe0-b2b4c423ee11" />
+
 
