@@ -30,4 +30,5 @@
 #### Here I get the root password that is <b> password123 <b> and the hash was encrypted by <b> sha512crypt <b>
 
 <img width="481" height="87" alt="image" src="https://github.com/user-attachments/assets/a09f6283-26a1-4203-aa6d-6efa26a7f626" />
+
 #### Login as root 
