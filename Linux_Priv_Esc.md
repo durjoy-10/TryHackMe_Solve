@@ -103,3 +103,24 @@
 #### Now try to login as user Ddas and password durjoy and get the root privilege 
 <img width="1203" height="72" alt="image" src="https://github.com/user-attachments/assets/caf1c988-78de-4f65-9481-1c8cccf2976e" />
 
+
+## Extra: If a normal user have /etc/sudoers file permission then the process for escalate privilege 
+#### It is not work in the latest linux machine .. 
+### process : 
+#### cmd:``` ls -la /etc/sudoers ```
+###### It finds the permission of the /etc/sudoers file 
+
+#### cmd:``` cat /etc/sudoers ```
+###### Read the file 
+
+#### cmd:``` vi /etc/sudoers ```
+###### Edits the files ..Add this ! 
+  ```
+     #User Privilege Specification
+root ALL=(All) ALL
+user ALL=(ALL) ALL  --> Here I add these in these file
+  ```
+#### Now if the technique worked then i can run all the files or do what the root do using sudo privious the command .. 
+
+#### cmd ```sudo bash``` 
+###### Here I get the root bash it it worked ..But in this room the machine is up-to-date..Thats why i can't get access ..If it is not worked then it shows this type of message "sudo: /etc/sudoers is mode 0446, should be 0440..That's mean others userers don't have root permissions"
