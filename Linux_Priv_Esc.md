@@ -69,4 +69,37 @@
 
 <img width="1310" height="836" alt="image" src="https://github.com/user-attachments/assets/57faff68-60e0-49de-abe0-b2b4c423ee11" />
 
+## Where I have write permission of /etc/passwd , I can use 3 techniques to escalate root privilege.. 
+
+### Technique_1:  
+##### N.B: It is not worked in all machine. But it good to check 
+#### First check the /etc/passwd file permission 
+<img width="513" height="57" alt="image" src="https://github.com/user-attachments/assets/98cc86ff-bdd8-4810-b6d4-7452c7f7a3a5" />
+#### Here i have read and write permission .. 
+
+#### Now simply read the file 
+<img width="1203" height="147" alt="image" src="https://github.com/user-attachments/assets/89ce9220-69af-4824-a13b-39b5b2bc2ce4" />
+#### Here Focus in any user..(root or others) .. I use root user .. Here in the root user hashes here have a x after root ..It means the root password is saved in shadow file .. 
+#### Here After x , 0:0 defines userid(root) and groupid (root) 
+
+#### Now remove the x which defines password in the shadow file as black password 
+<img width="403" height="147" alt="image" src="https://github.com/user-attachments/assets/9dd4c8a8-c132-49b7-822a-f5b1e86955e4" />
+
+#### Now try to login but failed..because in updated linux machine this method is not worked 
+<img width="1203" height="87" alt="image" src="https://github.com/user-attachments/assets/b09d7daa-2f4c-4329-9a25-f6bb57f7b275" />
+
+
+### Technique_2: give a hash password instead of x ..Then it is not check the shadow files..Automatically execute here 
+<img width="732" height="153" alt="image" src="https://github.com/user-attachments/assets/a48e9a57-5499-48cf-a8ad-058bfc1c549d" />
+
+#### Here i use hashes of durjoy 
+
+#### NOw login as root giving the password durjoy 
+<img width="1203" height="72" alt="image" src="https://github.com/user-attachments/assets/765ac3a3-c0aa-4d13-b2e4-6c81d6295fd4" />
+
+### Technique_3 : Here i created a new user(Ddas), password(durjoy) with giving root permissions 
+<img width="730" height="56" alt="image" src="https://github.com/user-attachments/assets/a99ca792-0be7-42c7-a1d4-596ce1021e1f" />
+
+#### Now try to login as user Ddas and password durjoy and get the root privilege 
+<img width="1203" height="72" alt="image" src="https://github.com/user-attachments/assets/caf1c988-78de-4f65-9481-1c8cccf2976e" />
 
