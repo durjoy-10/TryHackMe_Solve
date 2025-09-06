@@ -124,3 +124,21 @@ user ALL=(ALL) ALL  --> Here I add these in these file
 
 #### cmd ```sudo bash``` 
 ###### Here I get the root bash it it worked ..But in this room the machine is up-to-date..Thats why i can't get access ..If it is not worked then it shows this type of message "sudo: /etc/sudoers is mode 0446, should be 0440..That's mean others userers don't have root permissions"
+
+
+<img width="1314" height="770" alt="image" src="https://github.com/user-attachments/assets/6117d8b5-24ed-4eb3-90a5-6b466c5a8bae" />
+
+## Sudo Misconfigure: 
+### Technique_1: Idtended Functionality
+<img width="1248" height="368" alt="Intended_1" src="https://github.com/user-attachments/assets/257ebc18-8a66-4259-ac75-4f263df5c258" />
+<img width="1435" height="99" alt="Intended_2" src="https://github.com/user-attachments/assets/a9d9f3ca-4dff-4158-8b37-e2c80d7be37d" />
+
+### Technique_2: Shell Escaping 
+
+<img width="731" height="486" alt="shell_escaping_1" src="https://github.com/user-attachments/assets/e23257ce-bf1a-43b5-8695-56a6f4f1dc45" />
+<img width="731" height="58" alt="shell_escaping_1_1" src="https://github.com/user-attachments/assets/fd772000-745c-42f9-96d4-a36f7ffe745c" />
+
+<img width="1084" height="858" alt="image" src="https://github.com/user-attachments/assets/6fa09d63-c56b-4988-b135-85b9c9b6489b" />
+
+<span style="color:red">Here I will give the note how to escalate privilege using environment variable </span>
+
