@@ -140,5 +140,5 @@ user ALL=(ALL) ALL  --> Here I add these in these file
 
 <img width="1084" height="858" alt="image" src="https://github.com/user-attachments/assets/6fa09d63-c56b-4988-b135-85b9c9b6489b" />
 
-<span style="color:red">Here I will give the note how to escalate privilege using environment variable </span>
+<span style="color:green; font-weight:bold;">Here I will give the note how to escalate privilege using environment variable </span>
 
