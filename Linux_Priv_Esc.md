@@ -140,5 +140,49 @@ user ALL=(ALL) ALL  --> Here I add these in these file
 
 <img width="1084" height="858" alt="image" src="https://github.com/user-attachments/assets/6fa09d63-c56b-4988-b135-85b9c9b6489b" />
 
-<span style="color:green; font-weight:bold;">Here I will give the note how to escalate privilege using environment variable </span>
+<img width="466" height="827" alt="image" src="https://github.com/user-attachments/assets/210a1c2b-d468-4bd7-9090-de747ec4b66c" />
 
+<img width="1112" height="768" alt="image" src="https://github.com/user-attachments/assets/faddcc36-5330-4139-a959-885a13632389" />
+
+<img width="1112" height="835" alt="image" src="https://github.com/user-attachments/assets/2d530c25-2bbc-4a76-b394-50b61cfa4a2a" />
+
+<img width="1226" height="663" alt="image" src="https://github.com/user-attachments/assets/14842231-84d1-44b0-a6d1-3c54cfcdebcc" />
+
+<img width="1123" height="726" alt="image" src="https://github.com/user-attachments/assets/9790b554-b7e3-448b-88c1-223d66522dde" />
+
+<img width="1031" height="804" alt="image" src="https://github.com/user-attachments/assets/55696134-3966-47b1-9d35-ab7bd1c37d6e" />
+
+<img width="1058" height="801" alt="image" src="https://github.com/user-attachments/assets/bd5c334b-8dcd-4bc8-9a97-f6c7113031c9" />
+
+<img width="1085" height="705" alt="image" src="https://github.com/user-attachments/assets/f9ab27a3-a81a-4336-a11a-24196f04c3f6" />
+
+<img width="985" height="752" alt="image" src="https://github.com/user-attachments/assets/da45433d-785c-4093-a4d4-73d6ecd680e3" />
+
+<img width="921" height="749" alt="image" src="https://github.com/user-attachments/assets/c33ba391-7e48-4f47-bff6-c4e4c6148f33" />
+
+<img width="995" height="808" alt="image" src="https://github.com/user-attachments/assets/f4e1b68f-b3c1-4e2d-8a3d-8dc00b831883" />
+
+<img width="1436" height="611" alt="image" src="https://github.com/user-attachments/assets/58546739-29f0-4228-82a6-7af82b29dd36" />
+
+<img width="1001" height="772" alt="image" src="https://github.com/user-attachments/assets/513718d8-e366-4faa-ada8-66d2967debe1" />
+
+<img width="929" height="773" alt="image" src="https://github.com/user-attachments/assets/6addea54-bdc7-4f6b-94a0-fd4dd52ed3b3" />
+
+<img width="1449" height="806" alt="image" src="https://github.com/user-attachments/assets/a6cc9dee-2434-43b7-beab-37fa62467e87" />
+
+<img width="1011" height="806" alt="image" src="https://github.com/user-attachments/assets/6f5f81c0-8c30-4081-b1db-1b4e82c0b5c3" />
+
+<img width="1073" height="690" alt="image" src="https://github.com/user-attachments/assets/d65b7901-c3b8-409c-8e83-c13fa41a55ea" />
+
+<img width="1395" height="652" alt="image" src="https://github.com/user-attachments/assets/63cb3f9d-b6d0-4c75-82df-29b4b73d730b" />
+
+<img width="1095" height="749" alt="image" src="https://github.com/user-attachments/assets/6594434b-f15c-4243-957b-cdc177aa15c9" />
+
+## More Technique 
+--- 
+
+<img width="896" height="770" alt="image" src="https://github.com/user-attachments/assets/c7d3c3ca-2006-4190-92bd-8abc7e75e220" />
+
+<img width="1044" height="785" alt="image" src="https://github.com/user-attachments/assets/9cd01d0d-2a18-497c-9242-17b555bacd8b" />
+
+<img width="938" height="221" alt="image" src="https://github.com/user-attachments/assets/a578bf67-093a-474f-81b2-aa8968783966" />
