@@ -1,4 +1,4 @@
-<img width="1914" height="955" alt="image" src="https://github.com/user-attachments/assets/5ca5462e-c6dc-4806-9c9e-6fe1149e23ca" /><img width="1203" height="932" alt="image" src="https://github.com/user-attachments/assets/9dff1290-97f2-459b-aee4-2597903a243b" />
+<img width="1203" height="932" alt="image" src="https://github.com/user-attachments/assets/9dff1290-97f2-459b-aee4-2597903a243b" />
 
 ### Nmap scan: 
 ```
