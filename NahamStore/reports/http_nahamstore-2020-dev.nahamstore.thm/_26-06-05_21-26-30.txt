@@ -1,0 +1,5 @@
+# Dirsearch started Fri Jun  5 21:28:34 2026 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://nahamstore-2020-dev.nahamstore.thm -r
+
+200    47B   http://nahamstore-2020-dev.nahamstore.thm/api/
+302     0B   http://nahamstore-2020-dev.nahamstore.thm/api    -> REDIRECTS TO: /api/
+302     0B   http://nahamstore-2020-dev.nahamstore.thm/api/customers    -> REDIRECTS TO: /api/customers/

@@ -1,0 +1,21 @@
+# Dirsearch started Fri Jun  5 20:27:45 2026 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://nahamstore.thm
+
+301   178B   http://nahamstore.thm/js    -> REDIRECTS TO: http://127.0.0.1/js/
+301   178B   http://nahamstore.thm/css    -> REDIRECTS TO: http://127.0.0.1/css/
+403   564B   http://nahamstore.thm/js/
+200     3KB  http://nahamstore.thm/login
+200     3KB  http://nahamstore.thm/login/
+302     0B   http://nahamstore.thm/logout    -> REDIRECTS TO: /
+302     0B   http://nahamstore.thm/logout/    -> REDIRECTS TO: /
+200     3KB  http://nahamstore.thm/register
+200    13B   http://nahamstore.thm/robots.txt
+200     3KB  http://nahamstore.thm/search
+404    23B   http://nahamstore.thm/staff.js
+200     2KB  http://nahamstore.thm/staff/
+200     2KB  http://nahamstore.thm/staff
+404    23B   http://nahamstore.thm/staff.html
+404    23B   http://nahamstore.thm/staff.aspx
+404    23B   http://nahamstore.thm/staffadmin
+404    23B   http://nahamstore.thm/staff.jsp
+301   178B   http://nahamstore.thm/uploads    -> REDIRECTS TO: http://127.0.0.1/uploads/
+403   564B   http://nahamstore.thm/uploads/
