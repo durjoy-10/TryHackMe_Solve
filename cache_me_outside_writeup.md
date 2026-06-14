@@ -1,4 +1,4 @@
-# TryHackMe — Cache Me Outside: Professional OSINT Writeup
+# TryHackMe — Cache Me Outside
 
 ## Room Overview
 
